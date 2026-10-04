@@ -3,7 +3,7 @@
 // ============================================================
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, FileDown, ArrowRight, Sparkles, MapPin } from 'lucide-react';
+import { Mail, Phone, FileDown, ArrowRight, Sparkles, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { profile, socials } from '../data/content';
 
@@ -18,6 +18,8 @@ export default function Hero() {
         return <LinkedinIcon size={20} />;
       case 'mail':
         return <Mail size={20} />;
+      case 'phone':
+        return <Phone size={20} />;
       default:
         return <Mail size={20} />;
     }

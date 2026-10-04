@@ -9,7 +9,6 @@
 // Phase 4 will implement each section component in full.
 // ============================================================
 
-import { useTheme } from './hooks/useTheme';
 import Navbar      from './components/Navbar';
 import Hero        from './components/Hero';
 import About       from './components/About';
@@ -22,7 +21,6 @@ import Contact     from './components/Contact';
 import Footer      from './components/Footer';
 
 function App() {
-  const { theme, toggle } = useTheme();
 
   return (
     <>
@@ -50,7 +48,7 @@ function App() {
       </a>
 
       {/* ── Sticky Navbar ─────────────────────────────────── */}
-      <Navbar theme={theme} toggleTheme={toggle} />
+      <Navbar />
 
       {/* ── Main Content ──────────────────────────────────── */}
       <main id="main">

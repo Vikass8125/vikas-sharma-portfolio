@@ -13,7 +13,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, FileDown } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 import { profile } from '../data/content';
 
 const NAV_LINKS = [
@@ -24,7 +23,7 @@ const NAV_LINKS = [
   { label: 'Contact',    href: '#contact' },
 ];
 
-export default function Navbar({ theme, toggleTheme }) {
+export default function Navbar() {
   const [scrolled, setScrolled]   = useState(false);
   const [menuOpen, setMenuOpen]   = useState(false);
 
@@ -142,10 +141,8 @@ export default function Navbar({ theme, toggleTheme }) {
             ))}
           </nav>
 
-          {/* ── Right: Theme Toggle + Resume ──────────────── */}
+          {/* ── Right: Resume Button ─────────────────────── */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <ThemeToggle theme={theme} toggle={toggleTheme} />
-
             <a
               href={profile.resumeUrl}
               target="_blank"

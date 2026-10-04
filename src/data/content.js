@@ -1,31 +1,32 @@
 // ============================================================
 // content.js — Single source of truth for ALL portfolio content
 // ============================================================
-// To update any content on the site, edit ONLY this file.
-// No component code needs to change for content updates.
-//
-// TODOs are marked with: // TODO: <instruction>
+// Updated with Vikas Sharma's exact professional summary, skills,
+// experience bullets, and projects.
 // ============================================================
 
 // ── Profile ─────────────────────────────────────────────────
 export const profile = {
   name: "Vikas Sharma",
-  title: "AI Engineer & Generative AI Engineer",
-  tagline: "I build GenAI systems: RAG pipelines and AI agents, backed by production-grade Python APIs.",
+  title: "Software Engineer — Generative AI & Backend Development",
+  tagline:
+    "Building Generative AI applications, RAG pipelines, LLM-powered workflows, and production Python backend systems.",
   supportingLine:
-    "Software Developer based in Hyderabad, India — building practical LLM applications and moving toward MLOps & ML Engineering.",
+    "Built 4+ AI features and 30+ production REST APIs using Python, FastAPI, LangChain, LangGraph, embeddings, and vector databases.",
   location: "Hyderabad, India",
   email: "vikass.work21@gmail.com",
+  phone: "+91 8008144741",
+  rawPhone: "8008144741",
   resumeUrl: "/vikas-sharma-portfolio/resume/Vikas_Sharma_AI_Engineer.pdf",
   photo: "/vikas-sharma-portfolio/images/profile.jpg",
   openToWork: true,
-  openToWorkLabel: "Open to opportunities: GenAI · AI Engineering · Data Science",
-  web3formsKey: "YOUR_WEB3FORMS_KEY",                          // TODO: Get free key at web3forms.com
-  bookingUrl: "",                                               // TODO: Optional — Cal.com free booking link
+  openToWorkLabel: "Open to opportunities: Generative AI · AI Engineering · Backend",
+  web3formsKey: "YOUR_WEB3FORMS_KEY",
+  bookingUrl: "",
   stats: [
-    { value: "6+",      label: "Projects Built" },
-    { value: "2+",      label: "Years Experience" },
-    { value: "RAG · Agents · FastAPI", label: "Core Stack" },
+    { value: "4+",      label: "AI Features Built" },
+    { value: "30+",     label: "Production REST APIs" },
+    { value: "RAG · Agents · FastAPI", label: "Core AI Stack" },
   ],
 };
 
@@ -35,137 +36,128 @@ export const socials = [
     label: "GitHub",
     url: "https://github.com/Vikass8125",
     icon: "github",
+    display: "github.com/Vikass8125",
   },
   {
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/vikas-sharma8125",
     icon: "linkedin",
+    display: "in/vikas-sharma8125",
   },
   {
     label: "Email",
     url: "mailto:vikass.work21@gmail.com",
     icon: "mail",
+    display: "vikass.work21@gmail.com",
+  },
+  {
+    label: "Phone",
+    url: "tel:+918008144741",
+    icon: "phone",
+    display: "+91 8008144741",
   },
 ];
 
 // ── About Section ─────────────────────────────────────────────
 export const about = {
   paragraphs: [
-    "I'm a Software Developer at Pragadas Technologies, Hyderabad, where I build LLM-powered applications, RAG systems, and AI agents using Python, FastAPI, LangChain, and LangGraph. I've shipped production backends, conversational AI systems, and agentic workflows used by real clients.",
-    "Before moving into AI, I worked at Tata Elxsi as an Engineer, building Jenkins CI/CD pipelines, Python automation tools, and system integrations that cut deployment time by ~40% and saved 50+ developer hours per week. I hold a B.Tech in Electronics and Communication Engineering from NIT Patna (CGPA 8.86).",
-    "I'm currently deepening my ML and MLOps skills and am actively looking for AI Engineer, Generative AI Engineer, or Data Science roles — in Hyderabad or remote.",
+    "I am a Software Engineer with hands-on experience building Generative AI applications, RAG pipelines, LLM-powered workflows, and Python backend systems. I've built 4+ AI features and 30+ production REST APIs using Python, FastAPI, LangChain, LangGraph, embeddings, vector databases, and LLM APIs.",
+    "At Pragadas Technologies, I design RAG workflows for document and company knowledge retrieval using embeddings and vector similarity search, develop AI agent POCs, and integrate enterprise APIs including NetSuite, FedEx, UPS/RocketShipIt, Amazon Seller API, and DocuSign with cloud-hosted backend services.",
+    "Before moving into Generative AI, I worked at Tata Elxsi, engineering Jenkins CI/CD pipelines, automating data validation, and integrating Python with C (ctypes) to accelerate compute-heavy modules by 30%. I hold a B.Tech in Electronics and Communication Engineering from NIT Patna (CGPA 8.86).",
   ],
   highlights: [
     {
       icon: "brain",
-      title: "End-to-End GenAI Apps",
-      description: "RAG pipelines, AI agents, and multi-turn conversational systems with LangChain & LangGraph.",
+      title: "Generative AI & RAG",
+      description: "RAG pipelines, AI agents, semantic search, and LLM workflows with LangChain & LangGraph.",
     },
     {
       icon: "zap",
-      title: "Clean, Scalable APIs",
-      description: "Production-grade FastAPI backends with PostgreSQL, Supabase, Redis, and Docker.",
+      title: "Production Backend APIs",
+      description: "30+ production REST APIs with FastAPI, Pydantic, PostgreSQL, Supabase, Redis, and Docker.",
+    },
+    {
+      icon: "cloud",
+      title: "Enterprise & Cloud Integrations",
+      description: "Integrated NetSuite, FedEx, UPS, Amazon Seller API, DocuSign, Groq, OpenRouter, and AWS.",
     },
     {
       icon: "git-branch",
-      title: "Automation & CI/CD Mindset",
-      description: "Jenkins, GitHub Actions, Docker-based pipelines from my Tata Elxsi engineering background.",
-    },
-    {
-      icon: "users",
-      title: "Mentoring & Collaboration",
-      description: "Mentored 4 junior developers through code reviews, KT sessions, and structured task guidance.",
+      title: "AI-Assisted Development",
+      description: "Daily hands-on use of Cursor, Antigravity, Codex, and GitHub Copilot for rapid delivery.",
     },
   ],
 };
 
-// ── Skills ────────────────────────────────────────────────────
+// ── Technical Skills ──────────────────────────────────────────
 export const skills = [
   {
-    group: "GenAI & LLMs",
+    group: "Languages & Backend",
+    icon: "server",
+    items: [
+      "Python",
+      "SQL",
+      "FastAPI",
+      "REST APIs",
+      "Pydantic",
+    ],
+  },
+  {
+    group: "Generative AI",
     icon: "brain",
     items: [
+      "Generative AI",
+      "LLMs",
       "RAG",
-      "AI Agents",
       "LangChain",
       "LangGraph",
-      "Prompt Engineering",
+      "AI Agents",
       "Embeddings",
       "Semantic Search",
-      "Pinecone",
-      "FAISS",
-      "ChromaDB",
-      "Groq",
-      "OpenRouter",
-      "Ollama",
+      "Prompt Engineering",
       "Conversational AI",
     ],
   },
   {
-    group: "Backend",
-    icon: "server",
+    group: "Vector & Data",
+    icon: "database",
     items: [
-      "Python",
-      "FastAPI",
-      "REST APIs",
-      "Pydantic",
+      "Pinecone",
+      "FAISS",
+      "ChromaDB",
       "PostgreSQL",
       "Supabase",
-      "MySQL",
+      "MongoDB",
       "Redis",
-      "SQLAlchemy 2.0",
-      "Authentication",
-      "API Integration",
     ],
   },
   {
-    group: "Cloud & DevOps",
+    group: "APIs & Cloud",
     icon: "cloud",
     items: [
+      "NetSuite",
+      "FedEx",
+      "UPS/RocketShipIt",
+      "Amazon Seller API",
+      "DocuSign",
+      "Groq",
+      "OpenRouter",
+      "AWS",
       "Docker",
-      "GitHub Actions",
-      "Jenkins",
-      "CI/CD",
-      "AWS EC2",
-      "AWS ECR",
-      "AWS App Runner",
-      "AWS RDS",
-      "AWS IAM",
-      "Railway",
-      "Git",
     ],
   },
   {
-    group: "Data & ML",
-    icon: "bar-chart-2",
-    items: [
-      "pandas",
-      "NumPy",
-      "scikit-learn",
-      "XGBoost",
-      "NLP",
-      "TF-IDF",
-      "Cosine Similarity",
-      "EDA",
-      "Feature Engineering",
-      "Model Evaluation",
-    ],
-  },
-  {
-    group: "Tools",
+    group: "Development & Tools",
     icon: "wrench",
     items: [
-      "GitHub",
-      "Postman",
-      "VS Code",
+      "Git",
+      "GitHub Actions",
+      "Jenkins",
+      "Railway",
       "Cursor",
       "Antigravity",
-      "GitHub Copilot",
       "Codex",
-      "MinGW",
-      "APScheduler",
-      "ReportLab",
-      "LaTeX",
+      "GitHub Copilot",
     ],
   },
 ];
@@ -173,34 +165,47 @@ export const skills = [
 // ── Work Experience ───────────────────────────────────────────
 export const experience = [
   {
-    role: "Software Developer",
+    role: "Software Engineer — Generative AI & Backend Development",
     company: "Pragadas Technologies",
-    location: "Hyderabad, Telangana, India",
-    period: "Feb 2025 – Present",
+    location: "Hyderabad, India",
+    period: "Feb. 2025 – Present",
     type: "Full-time",
     bullets: [
-      "Built LLM-powered applications and AI workflows using Python, FastAPI, LangChain, LangGraph, Groq, and OpenRouter.",
-      "Developed RAG applications using embeddings and vector databases (Pinecone, FAISS) for contextual document retrieval and Q&A.",
-      "Built agentic workflows with LangGraph for multi-step reasoning, tool integration, and task automation.",
-      "Built and maintained 30+ production-grade REST API endpoints using FastAPI; integrated NetSuite, FedEx, UPS, and DocuSign.",
-      "Developed AI-powered weekly task summarizer using Groq/OpenRouter LLMs with APScheduler for automated reporting.",
-      "Deployed AI applications and backend services on Railway and AWS (EC2, App Runner, ECR, RDS).",
-      "Mentored 4 junior developers through knowledge-transfer sessions, code reviews, and structured task guidance.",
+      "Developed and maintained 30+ production REST APIs using Python and FastAPI for a warehouse management system.",
+      "Built LLM-powered and Generative AI applications using LangChain, LangGraph, RAG, embeddings, vector databases, and LLM APIs.",
+      "Designed RAG workflows for document and company knowledge retrieval using embeddings and vector similarity search.",
+      "Developed AI application POCs involving AI agents, semantic search, conversational AI, and LLM-powered workflows.",
+      "Integrated NetSuite, FedEx, UPS/RocketShipIt, Amazon Seller API, and DocuSign with Python backend services.",
+      "Worked with PostgreSQL, Supabase, Railway, AWS RDS, Docker, and GitHub Actions for backend development and deployment.",
+      "Applied AI-assisted development using Cursor, Antigravity, Codex, and GitHub Copilot for implementation, debugging, refactoring, and development.",
     ],
-    tech: ["Python", "FastAPI", "LangChain", "LangGraph", "Pinecone", "Groq", "PostgreSQL", "Redis", "Docker", "AWS", "Railway"],
+    tech: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "Pinecone",
+      "Groq",
+      "OpenRouter",
+      "PostgreSQL",
+      "Supabase",
+      "Docker",
+      "Railway",
+      "AWS RDS",
+    ],
   },
   {
-    role: "Engineer",
+    role: "Engineer (Promoted from Intern) — Automation & CI/CD",
     company: "Tata Elxsi",
-    location: "Trivandrum, Kerala, India",
-    period: "Jan 2023 – Feb 2024",
-    type: "Full-time (Promoted from Intern)",
+    location: "Trivandrum, India",
+    period: "Jan. 2023 – Feb. 2024",
+    type: "Full-time",
     bullets: [
-      "Built and managed Jenkins-based CI/CD pipelines for automated build and deployment workflows — ~40% improvement in deployment efficiency.",
-      "Developed Python automation tools for repetitive engineering tasks, saving 50+ developer hours per week.",
-      "Integrated Python with C modules using ctypes for system-level automation — ~30% improvement in processing performance.",
-      "Automated data extraction and transformation across 100+ JSON files in engineering workflows.",
-      "Built monitoring workflows that reduced system downtime by ~25% through automated alerting.",
+      "Automated data parsing and validation workflows using Python to improve processing efficiency.",
+      "Maintained Jenkins CI/CD pipelines for automated deployments and testing workflows.",
+      "Integrated Python with C using ctypes to accelerate compute-heavy modules by 30%.",
+      "Collaborated with automation teams to streamline CI workflows, reducing build and test cycle times by 25%.",
     ],
     tech: ["Python", "Jenkins", "CI/CD", "ctypes", "Bash", "Automation"],
   },
@@ -217,85 +222,67 @@ export const education = [
   },
 ];
 
-// ── Projects ──────────────────────────────────────────────────
+// ── Projects for Slideshow ────────────────────────────────────
 export const projects = [
   {
-    title: "Company Knowledge RAG Chatbot",
-    summary: "A production-deployed RAG chatbot answering product and service questions for Pragadas Technologies.",
-    problem: "The company needed a way for visitors to get instant, accurate answers about their services without human support.",
-    solution:
-      "Built a RAG pipeline using LangChain + LangGraph for orchestration, Pinecone for vector storage, and OpenRouter/Groq as LLM backends. FastAPI backend with Redis for conversational memory.",
-    result: "Deployed on Railway after internal testing and approval. Handles multi-turn conversations with accurate retrieval.",
-    tech: ["Python", "FastAPI", "LangChain", "LangGraph", "Pinecone", "OpenRouter", "Groq", "Redis"],
-    github: "https://github.com/Vikass8125", // TODO: Add specific repo URL if public
-    demo: "",                                 // TODO: Add demo URL if available
-    image: "/vikas-sharma-portfolio/images/projects/rag-chatbot.webp", // TODO: Add screenshot
-    featured: true,
+    id: 1,
+    title: "Movie Recommender System (Content-Based)",
+    category: "Machine Learning · NLP & Similarity Search",
+    tagline: "Content-based movie recommendation engine utilizing TF-IDF and Cosine Similarity on 5,000+ movie plots.",
+    bullets: [
+      "Built a TF-IDF and cosine-similarity recommendation engine using 5,000+ movie plots.",
+      "Performed metadata cleaning, tokenization, and feature extraction for content similarity.",
+      "Optimized vectorization and similarity computation for scalable, low-latency recommendations.",
+    ],
+    tech: ["Python", "scikit-learn", "NLP", "TF-IDF", "Cosine Similarity", "pandas"],
+    status: "Featured Project",
+    isComingSoon: false,
+    github: "https://github.com/Vikass8125",
   },
   {
-    title: "VocalPal — Conversational Voice Assistant",
-    summary: "A stateful conversational voice assistant prototype with LLM reasoning and text-to-speech output.",
-    problem: "Needed a proof-of-concept voice assistant that could handle multi-turn conversations with natural speech output.",
-    solution:
-      "Used LangGraph for stateful conversation management, Groq for fast LLM inference, and ElevenLabs for TTS. Next.js frontend for the UI.",
-    result: "Functional prototype demonstrating end-to-end voice conversation flow with real-time TTS.",
-    tech: ["Python", "LangGraph", "Groq", "ElevenLabs", "Next.js"],
-    github: "https://github.com/Vikass8125", // TODO: Add specific repo URL if public
-    demo: "",
-    image: "/vikas-sharma-portfolio/images/projects/vocalpal.webp", // TODO: Add screenshot
-    featured: true,
+    id: 2,
+    title: "Enterprise RAG Knowledge System",
+    category: "Generative AI · Retrieval-Augmented Generation",
+    tagline: "High-accuracy semantic retrieval with hybrid vector search, dynamic chunking, and source attribution.",
+    bullets: [
+      "Production-ready RAG pipeline engineered for document and company knowledge retrieval.",
+      "Integrates dense embeddings with Pinecone vector database and semantic caching.",
+      "Sub-second response times with structured source verification and hallucination reduction.",
+    ],
+    tech: ["Python", "FastAPI", "LangChain", "Pinecone", "Groq", "Docker", "Redis"],
+    status: "Coming Soon",
+    isComingSoon: true,
+    github: "https://github.com/Vikass8125",
   },
   {
-    title: "Weekly Task Summarizer",
-    summary: "Automated AI-powered weekly work report generator with scheduled execution.",
-    problem: "Generating weekly task summaries manually was time-consuming for employees.",
-    solution:
-      "Built a FastAPI API that fetches employee task data, determines the relevant work week automatically, and generates AI summaries using Groq/OpenRouter. APScheduler runs the job every Saturday.",
-    result: "Fully automated weekly reporting workflow integrated into the HRMS system.",
-    tech: ["Python", "FastAPI", "Groq", "OpenRouter", "APScheduler"],
-    github: "https://github.com/Vikass8125", // TODO: Add specific repo URL if public
-    demo: "",
-    image: "/vikas-sharma-portfolio/images/projects/task-summarizer.webp", // TODO: Add screenshot
-    featured: false,
+    id: 3,
+    title: "Autonomous Agentic Workflow Engine",
+    category: "AI Agents · LangGraph & Tool Calling",
+    tagline: "State-graph driven multi-agent workflow system designed for multi-step reasoning and automated execution.",
+    bullets: [
+      "Autonomous agent loops orchestrating dynamic tool invocation and parallel web retrieval.",
+      "State-machine checkpoints with human-in-the-loop approvals and self-correction fallbacks.",
+      "Integrated with PostgreSQL and Supabase for persistent thread memory and task tracking.",
+    ],
+    tech: ["LangGraph", "Python", "Pydantic", "Groq", "PostgreSQL", "Supabase"],
+    status: "Coming Soon",
+    isComingSoon: true,
+    github: "https://github.com/Vikass8125",
   },
   {
-    title: "Movie Recommendation System",
-    summary: "Content-based movie recommendation engine using NLP and similarity search on 5,000+ movie plots.",
-    problem: "Needed a recommendation system that matches movies by content and plot similarity rather than ratings alone.",
-    solution:
-      "Cleaned and tokenized movie metadata, extracted TF-IDF features, and computed cosine similarity to generate ranked recommendations.",
-    result: "Accurately recommends similar movies based on plot, genre, and keyword overlap.",
-    tech: ["Python", "pandas", "scikit-learn", "NLP", "TF-IDF", "Cosine Similarity"],
-    github: "https://github.com/Vikass8125", // TODO: Add specific repo URL if public
-    demo: "",
-    image: "/vikas-sharma-portfolio/images/projects/movie-recommender.webp", // TODO: Add screenshot
-    featured: false,
-  },
-  {
-    title: "Customer Churn Prediction",
-    summary: "End-to-end ML pipeline for predicting customer churn using classification models.",
-    problem: "Businesses lose revenue when customers churn without advance warning.",
-    solution:
-      "Built a complete ML workflow: data preprocessing, feature engineering, model training with scikit-learn and XGBoost, and evaluation using precision, recall, and AUC.",
-    result: "Demonstrated production-ready ML pipeline with interpretable churn probability scores.",
-    tech: ["Python", "pandas", "scikit-learn", "XGBoost", "Feature Engineering"],
-    github: "https://github.com/Vikass8125", // TODO: Add specific repo URL if public
-    demo: "",
-    image: "/vikas-sharma-portfolio/images/projects/churn-prediction.webp", // TODO: Add screenshot
-    featured: false,
-  },
-  {
-    title: "URL Shortener with Click Analytics",
-    summary: "Production-style URL shortening backend with JWT authentication and Redis caching.",
-    problem: "Needed a full-stack backend project demonstrating real-world API design, caching, and auth.",
-    solution:
-      "FastAPI backend with PostgreSQL for persistence, Redis for redirect caching, JWT for authentication, and Docker for containerization.",
-    result: "Clean, documented REST API with analytics tracking for every shortened link.",
-    tech: ["FastAPI", "PostgreSQL", "Redis", "Docker", "JWT", "Python"],
-    github: "https://github.com/Vikass8125", // TODO: Add specific repo URL if public
-    demo: "",
-    image: "/vikas-sharma-portfolio/images/projects/url-shortener.webp", // TODO: Add screenshot
-    featured: false,
+    id: 4,
+    title: "Real-Time Conversational Voice Assistant",
+    category: "Conversational AI · Multimodal & Speech",
+    tagline: "Ultra-low latency bidirectional conversational AI integrating streaming LLM inference and TTS.",
+    bullets: [
+      "Streaming audio pipeline with Voice Activity Detection (VAD) and WebSocket connectivity.",
+      "Conversational memory management for multi-turn stateful dialogues.",
+      "Real-time expressive speech synthesis using ElevenLabs with Groq LLM reasoning.",
+    ],
+    tech: ["FastAPI", "WebSockets", "ElevenLabs", "Groq", "Next.js", "Python"],
+    status: "Coming Soon",
+    isComingSoon: true,
+    github: "https://github.com/Vikass8125",
   },
 ];
 
@@ -350,7 +337,6 @@ export const community = [
 ];
 
 // ── Certifications ────────────────────────────────────────────
-// TODO: Add certification links/images if available
 export const certifications = [
   { title: "Introduction to Prompt Engineering for Generative AI", issuer: "LinkedIn Learning" },
   { title: "How to Research and Write Using Generative AI Tools",  issuer: "LinkedIn Learning" },

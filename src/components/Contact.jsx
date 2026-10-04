@@ -3,7 +3,7 @@
 // ============================================================
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Copy, Check, Send, MapPin, Sparkles, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Mail, Copy, Check, Send, MapPin, Sparkles, AlertCircle, CheckCircle2, Phone } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import { profile, socials } from '../data/content';
 
@@ -360,6 +360,58 @@ export default function Contact() {
                 </button>
               </div>
             </div>
+
+            {/* Direct Phone Card */}
+            {profile.phone && (
+              <div className="card" style={{ padding: '1.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                  <Phone size={18} color="var(--accent-2)" />
+                  <span style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text-muted)' }}>
+                    Phone / Call
+                  </span>
+                </div>
+
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    background: 'var(--surface-2)',
+                    padding: '0.65rem 1rem',
+                    borderRadius: '8px',
+                    border: '1px solid var(--border)',
+                    marginTop: '0.5rem',
+                    flexWrap: 'wrap',
+                    gap: '0.5rem',
+                  }}
+                >
+                  <a
+                    href={`tel:${profile.phone}`}
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.925rem',
+                      color: 'var(--text)',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {profile.phone}
+                  </a>
+
+                  <a
+                    href={`tel:${profile.phone}`}
+                    className="btn-outline"
+                    aria-label="Call Vikas Sharma"
+                    style={{
+                      padding: '0.35rem 0.75rem',
+                      fontSize: '0.8rem',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Call
+                  </a>
+                </div>
+              </div>
+            )}
 
             {/* Location & Response Time */}
             <div className="card" style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>

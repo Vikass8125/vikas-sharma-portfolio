@@ -1,7 +1,7 @@
 // ============================================================
 // Footer.jsx — Footer with Back-to-Top and Social Links
 // ============================================================
-import { ArrowUp, Mail } from 'lucide-react';
+import { ArrowUp, Mail, Phone } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { profile, socials } from '../data/content';
 
@@ -18,6 +18,8 @@ export default function Footer() {
         return <LinkedinIcon size={18} />;
       case 'mail':
         return <Mail size={18} />;
+      case 'phone':
+        return <Phone size={18} />;
       default:
         return <Mail size={18} />;
     }
