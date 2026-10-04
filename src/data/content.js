@@ -16,8 +16,8 @@ export const profile = {
     "Software Developer based in Hyderabad, India — building practical LLM applications and moving toward MLOps & ML Engineering.",
   location: "Hyderabad, India",
   email: "vikass.work21@gmail.com",
-  resumeUrl: "/vikas-sharma-portfolio/resume/Vikas_Resume.pdf", // TODO: Add your resume PDF to public/resume/
-  photo: "/vikas-sharma-portfolio/images/profile.jpg",          // TODO: Add your photo to public/images/
+  resumeUrl: "/vikas-sharma-portfolio/resume/Vikas_Sharma_AI_Engineer.pdf",
+  photo: "/vikas-sharma-portfolio/images/profile.jpg",
   openToWork: true,
   openToWorkLabel: "Open to opportunities: GenAI · AI Engineering · Data Science",
   web3formsKey: "YOUR_WEB3FORMS_KEY",                          // TODO: Get free key at web3forms.com
