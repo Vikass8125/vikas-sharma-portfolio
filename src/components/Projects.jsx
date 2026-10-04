@@ -1,34 +1,34 @@
 // ============================================================
-// Projects.jsx — Slideshow / Carousel driven by content.js
+// Projects.jsx — Clean & Elegant Projects Slideshow
 // ============================================================
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Clock, ArrowRight, CheckCircle2, ChevronRight as ChevronIcon } from 'lucide-react';
+import { ChevronLeft, ChevronRight, CheckCircle2, ChevronRight as ChevronIcon, Clock } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import SectionHeading from './SectionHeading';
 import { projects } from '../data/content';
 
 const slideVariants = {
   enter: (direction) => ({
-    x: direction > 0 ? 280 : -280,
+    x: direction > 0 ? 260 : -260,
     opacity: 0,
-    scale: 0.96,
+    scale: 0.97,
   }),
   center: {
     x: 0,
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.45,
+      duration: 0.4,
       ease: [0.16, 1, 0.3, 1],
     },
   },
   exit: (direction) => ({
-    x: direction < 0 ? 280 : -280,
+    x: direction < 0 ? 260 : -260,
     opacity: 0,
-    scale: 0.96,
+    scale: 0.97,
     transition: {
-      duration: 0.35,
+      duration: 0.3,
       ease: [0.16, 1, 0.3, 1],
     },
   }),
@@ -50,66 +50,23 @@ export default function Projects() {
     [total]
   );
 
-  // Auto-play slideshow every 7 seconds when not hovered
+  // Auto-play every 8 seconds, pauses on hover
   useEffect(() => {
     if (isPaused) return;
     const timer = setInterval(() => {
       paginate(1);
-    }, 7000);
+    }, 8000);
     return () => clearInterval(timer);
   }, [isPaused, paginate]);
 
   return (
     <div className="section">
       <div className="container">
-        {/* Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <SectionHeading
-            title="Projects"
-            subtitle="Machine Learning systems, Generative AI pipelines, and production backend architectures"
-            centered={true}
-          />
-
-          {/* Central Announcement Banner */}
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.65rem',
-              padding: '0.45rem 1.25rem',
-              borderRadius: '9999px',
-              background: 'color-mix(in srgb, var(--accent) 12%, var(--surface))',
-              border: '1px solid var(--accent)',
-              boxShadow: '0 4px 20px rgba(99, 102, 241, 0.25)',
-              marginTop: '0.5rem',
-            }}
-          >
-            <Clock size={16} color="var(--accent-2)" />
-            <span
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.875rem',
-                fontWeight: 600,
-                color: 'var(--accent-2)',
-                letterSpacing: '0.5px',
-              }}
-            >
-              PORTFOLIO SHOWCASE · SLIDESHOW VIEW
-            </span>
-          </div>
-
-          <p
-            style={{
-              fontSize: '0.95rem',
-              color: 'var(--text-muted)',
-              marginTop: '0.85rem',
-              maxWidth: '65ch',
-              marginInline: 'auto',
-            }}
-          >
-            Featured projects and upcoming Generative AI systems currently in development and packaging for release.
-          </p>
-        </div>
+        {/* Section Heading — Clean, standard layout */}
+        <SectionHeading
+          title="Projects"
+          subtitle="Featured machine learning systems, Generative AI pipelines, and upcoming production architectures"
+        />
 
         {/* ── Slideshow Container ───────────────────────────── */}
         <div
@@ -117,7 +74,7 @@ export default function Projects() {
           onMouseLeave={() => setIsPaused(false)}
           style={{
             position: 'relative',
-            maxWidth: '860px',
+            maxWidth: '880px',
             marginInline: 'auto',
           }}
         >
@@ -125,13 +82,13 @@ export default function Projects() {
           <div
             style={{
               position: 'relative',
-              minHeight: '420px',
+              minHeight: '380px',
               overflow: 'hidden',
               borderRadius: 'var(--radius-card)',
               background: 'radial-gradient(ellipse at top left, var(--surface-2), var(--surface))',
               border: '1px solid var(--border)',
-              boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
-              padding: '2.5rem',
+              boxShadow: '0 20px 50px rgba(0, 0, 0, 0.35)',
+              padding: 'clamp(1.75rem, 4vw, 2.75rem)',
             }}
           >
             <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -149,7 +106,7 @@ export default function Projects() {
                   height: '100%',
                 }}
               >
-                {/* Slide Top Metadata Bar */}
+                {/* Header: Category + Status Badge */}
                 <div
                   style={{
                     display: 'flex',
@@ -171,20 +128,19 @@ export default function Projects() {
                     {current.category}
                   </span>
 
-                  {/* Status Badge */}
                   {current.isComingSoon ? (
                     <span
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
                         gap: '0.45rem',
-                        background: 'rgba(99, 102, 241, 0.18)',
+                        background: 'rgba(99, 102, 241, 0.15)',
                         border: '1px solid var(--accent)',
                         borderRadius: '9999px',
-                        padding: '0.25rem 0.75rem',
-                        fontSize: '0.785rem',
-                        fontWeight: 700,
-                        color: '#FFFFFF',
+                        padding: '0.3rem 0.85rem',
+                        fontSize: '0.8rem',
+                        fontWeight: 600,
+                        color: 'var(--text)',
                       }}
                     >
                       <span className="pulse-dot" aria-hidden="true" />
@@ -196,12 +152,12 @@ export default function Projects() {
                         display: 'inline-flex',
                         alignItems: 'center',
                         gap: '0.35rem',
-                        background: 'rgba(52, 211, 153, 0.15)',
+                        background: 'rgba(52, 211, 153, 0.12)',
                         border: '1px solid var(--success)',
                         borderRadius: '9999px',
-                        padding: '0.25rem 0.75rem',
-                        fontSize: '0.785rem',
-                        fontWeight: 700,
+                        padding: '0.3rem 0.85rem',
+                        fontSize: '0.8rem',
+                        fontWeight: 600,
                         color: 'var(--success)',
                       }}
                     >
@@ -214,23 +170,23 @@ export default function Projects() {
                 <h3
                   style={{
                     fontFamily: 'var(--font-head)',
-                    fontSize: 'clamp(1.5rem, 3.5vw, 2rem)',
+                    fontSize: 'clamp(1.5rem, 3.5vw, 1.95rem)',
                     fontWeight: 700,
                     color: 'var(--text)',
-                    lineHeight: 1.2,
+                    lineHeight: 1.25,
                   }}
                 >
                   {current.title}
                 </h3>
 
-                {/* Tagline / Value Prop */}
+                {/* Tagline */}
                 {current.tagline && (
                   <p
                     style={{
-                      fontSize: '1.025rem',
+                      fontSize: '1rem',
                       fontWeight: 500,
                       color: 'var(--text)',
-                      lineHeight: 1.5,
+                      lineHeight: 1.55,
                     }}
                   >
                     {current.tagline}
@@ -245,7 +201,7 @@ export default function Projects() {
                       padding: 0,
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '0.6rem',
+                      gap: '0.65rem',
                       marginTop: '0.25rem',
                     }}
                   >
@@ -255,14 +211,14 @@ export default function Projects() {
                         style={{
                           display: 'flex',
                           alignItems: 'flex-start',
-                          gap: '0.6rem',
-                          fontSize: '0.925rem',
+                          gap: '0.65rem',
+                          fontSize: '0.9375rem',
                           color: 'var(--text-muted)',
                           lineHeight: 1.6,
                         }}
                       >
                         <ChevronIcon
-                          size={15}
+                          size={16}
                           color="var(--accent-2)"
                           style={{ flexShrink: 0, marginTop: '4px' }}
                         />
@@ -279,14 +235,55 @@ export default function Projects() {
                     flexWrap: 'wrap',
                     gap: '0.5rem',
                     marginTop: 'auto',
-                    paddingTop: '1rem',
+                    paddingTop: '1.25rem',
+                    borderTop: '1px solid var(--border)',
                   }}
                 >
                   {current.tech.map((t) => (
-                    <span key={t} className="chip" style={{ fontSize: '0.8rem' }}>
+                    <span key={t} className="chip" style={{ fontSize: '0.8125rem' }}>
                       {t}
                     </span>
                   ))}
+                </div>
+
+                {/* Action Row */}
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    flexWrap: 'wrap',
+                    gap: '1rem',
+                    paddingTop: '0.25rem',
+                  }}
+                >
+                  {current.isComingSoon ? (
+                    <span
+                      style={{
+                        fontSize: '0.85rem',
+                        color: 'var(--text-muted)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.4rem',
+                      }}
+                    >
+                      <Clock size={14} color="var(--accent-2)" /> In Active Development · Coming Soon
+                    </span>
+                  ) : (
+                    <a
+                      href={current.github || "https://github.com/Vikass8125"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-outline"
+                      style={{
+                        padding: '0.45rem 1rem',
+                        fontSize: '0.85rem',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      <GithubIcon size={16} /> View on GitHub
+                    </a>
+                  )}
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -298,7 +295,7 @@ export default function Projects() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              marginTop: '1.75rem',
+              marginTop: '1.5rem',
               paddingInline: '0.5rem',
             }}
           >
@@ -308,8 +305,8 @@ export default function Projects() {
               aria-label="Previous project slide"
               className="btn-outline"
               style={{
-                width: '44px',
-                height: '44px',
+                width: '42px',
+                height: '42px',
                 padding: 0,
                 borderRadius: '50%',
                 display: 'flex',
@@ -317,10 +314,10 @@ export default function Projects() {
                 justifyContent: 'center',
               }}
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={18} />
             </button>
 
-            {/* Dots + Slide Counter */}
+            {/* Indicator Dots + Counter */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 {projects.map((_, idx) => (
@@ -361,8 +358,8 @@ export default function Projects() {
               aria-label="Next project slide"
               className="btn-outline"
               style={{
-                width: '44px',
-                height: '44px',
+                width: '42px',
+                height: '42px',
                 padding: 0,
                 borderRadius: '50%',
                 display: 'flex',
@@ -370,35 +367,9 @@ export default function Projects() {
                 justifyContent: 'center',
               }}
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={18} />
             </button>
           </div>
-        </div>
-
-        {/* ── View GitHub Activity Banner ─────────────────────── */}
-        <div
-          style={{
-            marginTop: '3.5rem',
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '1rem',
-          }}
-        >
-          <a
-            href="https://github.com/Vikass8125"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline"
-            style={{
-              padding: '0.75rem 1.75rem',
-              fontSize: '0.95rem',
-              textDecoration: 'none',
-            }}
-          >
-            <GithubIcon size={18} /> Follow My GitHub For Live Commits <ArrowRight size={16} />
-          </a>
         </div>
       </div>
     </div>
