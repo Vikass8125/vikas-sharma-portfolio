@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#0B0F1A"/>
+  <!-- "V" letterform -->
+  <text
+    x="16" y="22"
+    text-anchor="middle"
+    font-family="'Space Grotesk', system-ui, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="url(#grad)"
+  >V</text>
+</svg>
